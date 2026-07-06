@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw_bookstore_sofiatr
+    tables:
+      - name: authors
+      - name: books
+      - name: orders

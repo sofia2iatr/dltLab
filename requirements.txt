@@ -1,2 +1,2 @@
 dlt[postgres]
-pandas
+pandasp
