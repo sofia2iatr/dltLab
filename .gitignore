@@ -1,4 +1,13 @@
 .dlt/secrets.toml
+bookstore_dbt/.streamlit/secrets.toml
+.venv/
+bookstore_dbt/target/
+bookstore_dbt/dbt_packages/
+bookstore_dbt/logs/
+logs/
 __pycache__/
-*.pyc
-.env 
+target/
+dbt_packages/
+logs/
+.env
+.streamlit/secrets.toml

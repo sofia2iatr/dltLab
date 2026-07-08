@@ -73,3 +73,18 @@ Happy modeling!
 [0m20:11:58.765822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000181418BF440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000181418E2600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000181415DB0E0>]}
 [0m20:11:58.768705 [debug] [MainThread]: Flushing usage events
 [0m20:11:59.681362 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m07:57:15.363485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CBD715AC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CBA8A57F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CBB1F9940>]}
+
+
+============================== 07:57:15.379693 | f10d4cd8-f918-42b3-b5d9-334dd195ec62 ==============================
+[0m07:57:15.379693 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m07:57:15.380696 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\SOFIA\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt test', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m07:57:15.381694 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\SOFIA\dltLab\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m07:57:15.381694 [debug] [MainThread]: Command `dbt test` failed at 07:57:15.381694 after 0.90 seconds
+[0m07:57:15.382695 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CBFDC99D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CBFDCB8F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CBA8A57F0>]}
+[0m07:57:15.382695 [debug] [MainThread]: Flushing usage events
+[0m07:57:16.243142 [debug] [MainThread]: An error was encountered while trying to flush usage events

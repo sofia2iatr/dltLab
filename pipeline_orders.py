@@ -3,7 +3,7 @@ import pandas as pd
 
 @dlt.resource(
     name               = "orders",
-    write_disposition  = "append",
+    write_disposition  = "merge",
     primary_key        = "order_id"
 )
 def orders_incremental(
@@ -11,13 +11,11 @@ def orders_incremental(
 ):
     df = pd.read_csv("files/orders.csv")
     df["order_date"] = pd.to_datetime(df["order_date"]).dt.date.astype(str)
-
-    # Filter to only rows newer than the last known value
     new_rows = df[df["order_date"] > updated_at.last_value]
     yield new_rows.to_dict(orient="records")
 
 pipeline = dlt.pipeline(
-    pipeline_name = "orders_pipeline",   # separate from bookstore_pipeline to keep state isolated
+    pipeline_name = "orders_pipeline",
     destination   = "postgres",
     dataset_name  = "raw_bookstore_sofiatr"
 )

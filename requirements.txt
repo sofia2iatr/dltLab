@@ -1,2 +1,6 @@
-dlt[postgres]
-pandasp
+dlt==1.28.1
+pandas==3.0.3
+psycopg2-binary==2.9.12
+streamlit==1.59.0
+dbt-core
+dbt-postgres
